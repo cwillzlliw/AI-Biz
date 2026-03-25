@@ -2,13 +2,26 @@
 
 ## Project Overview
 
-This project is an **AI Business Strategy Agent** — an intelligent system that helps small businesses and entrepreneurs make data-driven decisions about marketing, operations, pricing, and growth. It analyzes business data, generates actionable recommendations, and integrates with real-world tools to streamline strategic planning.
+This project is a **Ghana AI Strategy & Automation Agent** — an intelligent system that identifies high-ROI AI opportunities for small and medium enterprises (SMEs) in **Greater Accra**. The core strategy is **"Operational Digitization"**: moving businesses from manual paper-based and WhatsApp-driven workflows to automated AI systems.
+
+The agent analyzes business data, generates actionable recommendations, and integrates with real-world tools to streamline strategic planning — with a focus on sectors where automation delivers the fastest returns.
+
+## Business Context (2026)
+
+- **Target Market:** SMEs in Greater Accra, Ghana
+- **Focus Sectors:**
+  - **Hospitality** — Boutique hotels and guest houses
+  - **Logistics** — Delivery and fleet coordination
+  - **Private Schools** — Admissions, parent communication, and admin workflows
+- **Value Proposition:** Support Ghana's **"24-Hour Economy"** push by deploying AI that handles night-shift inquiries, after-hours bookings, and round-the-clock customer engagement — so businesses never go offline.
+- **Strategy:** Identify where manual/WhatsApp workflows create bottlenecks, then recommend or build AI-powered automations that save time and money.
 
 ## Tech Stack
 
 - **Language:** Python 3.11+
-- **Backend / Database:** Supabase (PostgreSQL, Auth, Edge Functions, Realtime)
-- **AI / LLM:** Anthropic Claude API
+- **Backend / Database:** Supabase (PostgreSQL, Auth, Edge Functions, Realtime) — handles data storage, user authentication, and real-time updates
+- **AI / LLM:** Anthropic Claude API — powers the reasoning and recommendation engine
+- **Hosting:** Render — for deploying the API and background workers
 - **Framework:** FastAPI (for API endpoints)
 - **Environment Management:** python-dotenv, virtualenv
 
@@ -78,9 +91,15 @@ AI-Biz/
   - `SUPABASE_KEY` — Your Supabase anon/public key
   - `ANTHROPIC_API_KEY` — Claude API key for the AI agent
 
+### Environment & Secrets (Render Deployment)
+
+- `RENDER_API_KEY` — Render API key (for deployment automation, if used)
+- Render environment variables should mirror the `.env.example` entries above.
+
 ## Key Principles
 
 1. **Clarity over cleverness** — Write code a CTE student can read and learn from.
 2. **Security by default** — RLS, env vars, input validation.
 3. **Small, testable pieces** — Modular functions and classes that can be understood in isolation.
-4. **Practical AI** — The agent should produce recommendations a real business owner can act on.
+4. **Practical AI** — The agent should produce recommendations a real Ghanaian business owner can act on.
+5. **24-Hour Economy ready** — Design for always-on operation: async processing, queue-based workflows, and graceful handling of off-hours requests.
